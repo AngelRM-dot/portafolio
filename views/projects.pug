@@ -2,7 +2,7 @@ extends layouts/main.pug
 
 block content
   main.minecraft-main
-    section.minecraft-section
+    section.minecraft-section.projects-page
       h2.minecraft-title Proyectos 
       .minecraft-projects
         each proyecto in datos.proyectos
@@ -12,7 +12,11 @@ block content
             .minecraft-project-info
               h3= proyecto.nombre
               p= proyecto.descripcion
-              .minecraft-techs
-                each tech in proyecto.tecnologias
-                  span.minecraft-tech= tech
-              a.minecraft-button(href="#") Ver en GitHub
+              if proyecto.github
+                a.minecraft-button(
+                  href=proyecto.github,
+                  target="_blank",
+                  rel="noopener noreferrer"
+                ) 
+                  i.fab.fa-github  
+                  | Ver en GitHub

@@ -7,7 +7,16 @@
     --mc-gray: #ababab;
     --mc-dark-gray: #4a4a4a;
     --mc-black: #1a1a1a;
-    --mc-text: #e0e0e0;
+    --mc-text: #ffffff;
+    --mc-title: #ffffff; 
+    --mc-light-green: #ffffff;
+}
+
+.home-page .minecraft-title,
+.home-page .minecraft-subtitle,
+.home-page .minecraft-project h4 {
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 body {
@@ -19,12 +28,9 @@ body {
 } 
 
 .about-page {
-  /* Color principal para textos */
-  --mc-text: #ffe0a0; /* Amarillo claro (mejor legibilidad) */
-  --mc-title: #ff5555; /* Rojo lava */
-  --mc-subtitle: #ff9933; /* Naranja brillante */
-  
-  /* Aplicar colores */
+  --mc-text: #ffe0a0; 
+  --mc-title: #ff5555; 
+  --mc-subtitle: #ff9933; 
   color: var(--mc-text);
 }
 
@@ -260,6 +266,158 @@ body {
     margin: 0;
     font-size: 0.9rem;
 }
+/* ------------------------------- */
+
+
+.cv-page {
+  --end-bg-color: rgba(15, 0, 30, 0.9);
+  --end-section-bg: rgba(20, 0, 40, 0.8);
+  --end-border: #6a0dad;
+  
+  --end-text: #e6e6ff;
+  --end-subtext: #b8b8ff;
+  --end-highlight: #ff9af5;
+  --end-title: #b56aff;
+  --end-title-glow: #6a00ff;
+  
+  --end-timeline-dot: #9d4edd;
+  --end-timeline-border: #5a1a8c;
+}
+
+.cv-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.cv-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    url('/img/end-minecraft.jpg') center/cover no-repeat fixed,
+    linear-gradient(to bottom, #0a0011, #1a0033);
+  z-index: -2;
+  opacity: 0.9;
+}
+
+.cv-page .minecraft-container {
+  background-color: var(--end-bg-color) !important;
+}
+
+.cv-page .minecraft-section {
+  background-color: var(--end-section-bg) !important;
+  border-color: var(--end-border) !important;
+}
+
+.cv-page,
+.cv-page .minecraft-desc,
+.cv-page .minecraft-box,
+.cv-page .minecraft-list,
+.cv-page .minecraft-warning {
+  color: var(--end-text) !important;
+}
+
+.cv-page .minecraft-date,
+.cv-page .minecraft-subtitle {
+  color: var(--end-subtext) !important;
+}
+
+.cv-page .minecraft-puesto,
+.cv-page a:hover {
+  color: var(--end-highlight) !important;
+}
+
+.cv-page .minecraft-title {
+  color: var(--end-title) !important;
+  text-shadow: 0 0 10px var(--end-title-glow) !important;
+}
+
+.cv-page .minecraft-event:before {
+  background: var(--end-timeline-dot) !important;
+  border-color: var(--end-timeline-border) !important;
+}
+
+.cv-page a {
+  color: var(--end-highlight) !important;
+  border-bottom: 1px dashed var(--end-highlight) !important;
+}
+
+/* ------------------------------- */
+
+
+
+.projects-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    url('/img/aldeanos.jpg') center/cover no-repeat fixed,
+    linear-gradient(to bottom, #3a2a1a, #1a100a);
+  z-index: -2;
+  opacity: 0.8;
+}
+.projects-page,
+.projects-page *:not(.minecraft-button) {
+  color: white !important;
+}
+
+/* ------------------------------- */
+
+
+
+.minecraft-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.minecraft-contact-info {
+  background-color: rgba(40, 40, 40, 0.8);
+  padding: 1.5rem;
+  border: 2px solid var(--mc-brown);
+  border-radius: 5px;
+}
+
+.minecraft-contact-form {
+  background-color: rgba(40, 40, 40, 0.8);
+  padding: 1.5rem;
+  border: 2px solid var(--mc-brown);
+  border-radius: 5px;
+}
+
+.minecraft-form-group {
+  margin-bottom: 1.2rem;
+}
+
+.minecraft-input,
+.minecraft-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: rgba(30, 30, 30, 0.9);
+  border: 2px solid var(--mc-brown);
+  color: white;
+  font-family: 'Minecraft', sans-serif;
+  margin-top: 0.5rem;
+}
+
+.minecraft-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .minecraft-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ------------------------------- */
+
 
 @media (max-width: 768px) {
     .nav-container {
@@ -432,3 +590,21 @@ body {
     color: var(--mc-green);
     border-bottom: 1px solid var(--mc-green);
 }
+
+.hero h2,
+.hero p {
+    color: #ffffff !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5) !important;
+}
+
+.hero .minecraft-button {
+    background-color: var(--mc-brown) !important; 
+    color: var(--mc-text) !important; 
+    border: 2px solid var(--mc-dark-brown) !important;
+    text-shadow: none !important; 
+}
+
+.hero .minecraft-button:hover {
+    background-color: var(--mc-dark-brown) !important; 
+    transform: translateY(-2px) !important;
+}  

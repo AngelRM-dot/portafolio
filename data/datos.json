@@ -14,28 +14,21 @@
             "año": "2023"
         }
     ],
-    "habilidades": [
-        "Trabaj en equipo",
-        "por ponerXD",
-        "Hfua nose",
-        "nose manito"
-        
-    ],
+
     "experiencia": [  
-        "Actualmente buscando mi primera experiencia laboral"
+        "Sin experiencia laboral"
+        
     ],
     "proyectos": [
         {
             "nombre": "Frogger en Python",
-            "descripcion": "Recreación del clásico juego Frogger",
-            "tecnologias": ["Python"],
-            "imagen": "frogger-python.jpg"
+            "descripcion": "Recreacion del clasico juego Frogger en python",
+             "github":"https://github.com/AngelRM-dot/frogger-python"
         },
         {
             "nombre": "Portafolio Minecraft",
-            "descripcion": "Este portafolio con temática de videojuego",
-            "tecnologias": ["Node.js", "Express", "Pug", "CSS"],
-            "imagen": "portfolio-minecraft.jpg"
+            "descripcion": "Este portafolio con temática de Minecradt",
+            "github": "https://github.com/AngelRM-dot/portafolio"
         }
     ],
     "contacto": {

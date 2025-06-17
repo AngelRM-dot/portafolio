@@ -3,29 +3,49 @@ extends layouts/main.pug
 block content
   main.minecraft-main
     section.minecraft-section
-      h2.minecraft-title  Contacto
+      h2.minecraft-title Contacto
       .minecraft-contact-grid
         .minecraft-contact-info
-          h3.minecraft-subtitle   Contacto
+          h3.minecraft-subtitle Información
           ul.minecraft-list
-            li  Email: #{datos.contacto.email}
+            li Email: #{datos.contacto.email}
             if datos.contacto.linkedin
-              li  LinkedIn: 
-                a(href=datos.contacto.linkedin, target="_blank") #{datos.contacto.linkedin}
-            if datos.contacto.github
-              li  GitHub: 
-                a(href=datos.contacto.github, target="_blank") #{datos.contacto.github}
-
+              li 
+                | LinkedIn: 
+                a(href=datos.contacto.linkedin target="_blank") #{datos.contacto.linkedin}
+        
         .minecraft-contact-form
-          h3.minecraft-subtitle Contactame
-          form.minecraft-form(action="/contact", method="POST")
-            label.minecraft-label(for="nombre") Tu Nombre:
-            input.minecraft-input(type="text", id="nombre", name="nombre", required)
+          h3.minecraft-subtitle Envíame un mensaje
+          form.minecraft-form(
+            action="https://formspree.io/f/xzzgvppq" 
+            method="POST"
+          )
+            .minecraft-form-group
+              label.minecraft-label(for="nombre") Nombre:
+              input.minecraft-input(
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+              )
             
-            label.minecraft-label(for="email") Tu Email:
-            input.minecraft-input(type="email", id="email", name="email", required)
+            .minecraft-form-group
+              label.minecraft-label(for="email") Email:
+              input.minecraft-input(
+                type="email"
+                id="email"
+                name="email"
+                required
+              )
             
-            label.minecraft-label(for="mensaje") Mensaje:
-            textarea.minecraft-textarea(id="mensaje", name="mensaje", rows="4", required)
+            .minecraft-form-group
+              label.minecraft-label(for="mensaje") Mensaje:
+              textarea.minecraft-textarea(
+                id="mensaje"
+                name="message"
+                rows="5"
+                required
+              )
             
-            button.minecraft-button(type="submit") Enviar Mensaje
+            input(type="hidden" name="_next" value="/gracias")
+            button.minecraft-button(type="submit") Enviar
