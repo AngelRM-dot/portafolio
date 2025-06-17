@@ -1,0 +1,18 @@
+extends layouts/main.pug
+
+block content
+  main.minecraft-main
+    section.minecraft-section
+      h2.minecraft-title Proyectos 
+      .minecraft-projects
+        each proyecto in datos.proyectos
+          .minecraft-project-card
+            if proyecto.imagen
+              img(src=`/img/projects/${proyecto.imagen}`, alt=proyecto.nombre)
+            .minecraft-project-info
+              h3= proyecto.nombre
+              p= proyecto.descripcion
+              .minecraft-techs
+                each tech in proyecto.tecnologias
+                  span.minecraft-tech= tech
+              a.minecraft-button(href="#") Ver en GitHub

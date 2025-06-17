@@ -1,0 +1,47 @@
+{
+    "nombre": "Angel Riquelme",
+    "titulo": "Analista Programador - Santo Tomás 2024",
+    "descripcion": "Bienvenido a mi portafolio ",
+    "educacion": [
+        {
+            "institucion": "CFT Santo Tomás",
+            "titulo": "Analista Programador",
+            "año": "2024 (en curso)"
+        },
+        {
+            "institucion": "Liceo Gracia y Paz",
+            "titulo": "Enseñanza Media",
+            "año": "2023"
+        }
+    ],
+    "habilidades": [
+        "Trabaj en equipo",
+        "por ponerXD",
+        "Hfua nose",
+        "nose manito"
+        
+    ],
+    "experiencia": [  
+        "Actualmente buscando mi primera experiencia laboral"
+    ],
+    "proyectos": [
+        {
+            "nombre": "Frogger en Python",
+            "descripcion": "Recreación del clásico juego Frogger",
+            "tecnologias": ["Python"],
+            "imagen": "frogger-python.jpg"
+        },
+        {
+            "nombre": "Portafolio Minecraft",
+            "descripcion": "Este portafolio con temática de videojuego",
+            "tecnologias": ["Node.js", "Express", "Pug", "CSS"],
+            "imagen": "portfolio-minecraft.jpg"
+        }
+    ],
+    "contacto": {
+        "email": "angelsebastianriquel@gmail.com",
+        "github": "",  
+        "linkedin": "https://www.linkedin.com/in/angelRM2006"
+
+    }
+}

@@ -1,0 +1,36 @@
+extends layouts/main.pug
+
+block content
+  main.minecraft-main
+    section.minecraft-section
+      h2.minecraft-title  Educación
+      if datos.educacion && datos.educacion.length > 0
+        .minecraft-timeline
+          each edu in datos.educacion
+            .minecraft-event
+              h3= edu.institucion
+              p.minecraft-date  #{edu.año}
+              p.minecraft-desc= edu.titulo
+
+
+    section.minecraft-section
+      h2.minecraft-title  Experiencia
+      if datos.experiencia && datos.experiencia.length > 0
+        if typeof datos.experiencia[0] === 'string'
+          .minecraft-timeline
+            .minecraft-event
+              p.minecraft-desc= datos.experiencia[0]
+        else
+          .minecraft-timeline
+            each exp in datos.experiencia
+              .minecraft-event
+                if exp.empresa
+                  h3= exp.empresa
+                if exp.periodo
+                  p.minecraft-date  #{exp.periodo}
+                if exp.puesto
+                  p.minecraft-puesto= exp.puesto
+                if exp.descripcion
+                  p.minecraft-desc= exp.descripcion
+      else
+        p.minecraft-warning No hay experiencia laboral registradad

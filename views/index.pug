@@ -1,0 +1,26 @@
+extends layouts/main.pug
+
+block content
+    main.minecraft-main
+        section.hero
+            .hero-content
+                .minecraft-avatar
+                    img(src="/img/minecraft-avatar.png", alt="Avatar Minecraft")
+                h2 #{datos.titulo}
+                p #{datos.descripcion}
+                .minecraft-buttons
+                    a.minecraft-button(href="/about") Explorar
+                    a.minecraft-button(href="/contact") Contactar
+        
+        section.featured-projects
+            h3 Proyectos Destacados
+            .projects-grid
+                if datos.proyectos && datos.proyectos.length > 0
+                    each proyecto in datos.proyectos.slice(0, 2)
+                        .minecraft-project
+                            if proyecto.imagen
+                                img(src=`/img/projects/${proyecto.imagen}`, alt=proyecto.nombre)
+                            h4= proyecto.nombre
+                            p= proyecto.descripcion
+                else
+                    p No hay proyectos disponibles
