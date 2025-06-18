@@ -20,12 +20,16 @@
 }
 
 body {
-  font-family: 'Minecraft', sans-serif;
+  font-family: 'Minecraft', sans-serif !important;;
   background: 
     url('/img/minecraft-background.jpg') fixed,
     var(--mc-black);
   background-size: cover;
 } 
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/fonts/Minecraft.ttf') format('truetype');
+}
 
 .about-page {
   --mc-text: #ffe0a0; 
@@ -284,8 +288,7 @@ body {
 
 .minecraft-footer p {
     margin: 0;
-    font-size: 0.9rem;  
-    color: var(--mc-text);
+    font-size: 0.9rem;  color: var(--mc-text);
 
 }
 /* ------------------------------- */
@@ -366,7 +369,6 @@ body {
   color: var(--end-highlight) !important;
   border-bottom: 1px dashed var(--end-highlight) !important;
 }
-
 
 /* ------------------------------- */
 
