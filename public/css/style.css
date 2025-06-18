@@ -260,11 +260,33 @@ body {
     text-align: center;
     margin-top: 3rem;
     border-top: 4px solid var(--mc-brown);
+    /* */
+    border-top: 4px solid var(--mc-brown);
+    position: relative;
 }
+/**/
+.minecraft-footer::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--mc-brown),
+    var(--mc-brown) 10px,
+    var(--mc-dark-brown) 10px,
+    var(--mc-dark-brown) 20px
+  );
+}
+/**/
 
 .minecraft-footer p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.9rem;  
+    color: var(--mc-text);
+
 }
 /* ------------------------------- */
 
@@ -344,6 +366,7 @@ body {
   color: var(--end-highlight) !important;
   border-bottom: 1px dashed var(--end-highlight) !important;
 }
+
 
 /* ------------------------------- */
 

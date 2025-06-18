@@ -7,9 +7,12 @@ html(lang="es")
         link(rel="stylesheet", href="/css/style.css")
         link(rel="icon", type="image/png", href="/img/minecraft-block.png")
     body
-        .minecraft-container
-            include ../includes/nav.pug
-            
-            block content
-            
-            include ../includes/footer.pug
+    .minecraft-container(style="display: flex; flex-direction: column; min-height: 100vh;")
+      block nav
+        include ../includes/nav
+
+      main.minecraft-main(style="flex: 1;")
+        block content
+
+      block footer
+        include ../includes/footer
